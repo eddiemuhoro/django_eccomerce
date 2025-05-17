@@ -24,3 +24,24 @@ class MpesaPaymentView(APIView):
             response = lipa_na_mpesa_online(phone_number, amount)
             return Response(response, status=200)
         return Response(serializer.errors, status=400)
+    
+class MpesaCallbackView(APIView):
+    def post(self, request):
+        serializer = MpesaPaymentSerializer(data=request.data)
+        if not serializer.is_valid():
+            return Response(serializer.errors, status=400)
+        
+        # Process the callback data here
+        callback = serializer.validated_data['Body']['stkCallback']
+        result_code = callback['ResultCode']
+
+        if result_code == 0:
+            metadata = callback['CallbackMetadata']['Item']
+            amount = metadata[0]['Value']
+            phone_number = metadata[1]['Value']
+            transaction_id = metadata[3]['Value']
+           
+
+            return Response({"message": "Callback processed successfully"}, status=200)
+        
+        return Response({"error": "Callback processing failed"}, status=400)

@@ -33,7 +33,7 @@ def lipa_na_mpesa_online(phone_number, amount):
         "PartyA": phone_number,
         "PartyB": settings.MPESA_SHORTCODE,
         "PhoneNumber": phone_number,
-        "CallBackURL": "https://yourdomain.com/api/payments/callback/",
+        "CallBackURL": "https://9452-41-90-46-73.ngrok-free.app/",
         "AccountReference": "Ecommerce",
         "TransactionDesc": "Payment for goods"
     }
