@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-z7k@)z%$7&32^m)xe#hd=8!m4zl5#hig4#ae(9iqp47^9a5n6r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'rest_framework',
-    'django_daraja'
+    'django_daraja',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CORS settings allow all origins
+CORS_ALLOW_ALL_ORIGINS = True
