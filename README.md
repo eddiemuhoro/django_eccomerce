@@ -71,8 +71,4 @@ api_endpoints: |
   ## Screenshot
 ![Workflow Overview](./assets/test.png)
 
-  MIT
 
-maintainers:
-  - name: Your Name
-    email: your.email@example.com
