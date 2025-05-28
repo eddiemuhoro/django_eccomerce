@@ -6,7 +6,7 @@ def product_image_path(instance, filename):
 # Create your models here.
 class Product(models.Model):
     name = models.CharField(max_length=200)
-    desc = models.TextField(_("Description"), blank=True)
+    desc = models.TextField(("Description"), blank=True)
     image = models.ImageField(upload_to=product_image_path, blank=True)
     price = models.DecimalField(decimal_places=2, max_digits=10)
     quantity = models.IntegerField(default=1)
