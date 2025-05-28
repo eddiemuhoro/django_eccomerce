@@ -67,11 +67,8 @@ api_endpoints: |
   - **POST** `/api/payment/` - Initiate M-Pesa payment
   - **POST** `/api/callback/` - Handle M-Pesa payment callback
 
-license: |
-  ## License
 
-  MIT
+  ## Screenshot
+![Workflow Overview](./assets/test.png)
 
-maintainers:
-  - name: Your Name
-    email: your.email@example.com
+
