@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'product',
+    'orders',
     'rest_framework',
     'django_daraja',
     'corsheaders',
